@@ -37,7 +37,7 @@ Qual agent será usado para observar o código, qual parte será observada.
 
 
 ## OpenTelemetry OpenTracing e OpenCensus
-Tendência de mercado
+É uma tendência de mercado
 
 - Signals - o que ele envia 
 - Traces - tempo que demorou para executar um código
@@ -45,10 +45,16 @@ Tendência de mercado
 - Logs - Log de cada trace
 - Baggage - Contextualizar a aplicação e enviar de um ponto a outro. Um para cada microsserviço, assim saberemos o tempo de cada um e descobrir possíveis gargalos.
 
+
 Permite Instrumentação automática e manual.
 
+Com ele é possível monitorar trechos de código ou funções de forma específica.
+
+Ele monitora as requisições de banco automáticamente.
+
 Collector
-Quem vai pegar a informação e enviar para onde vai ser analizada.
+- Quem vai pegar a informação e enviar para onde vai ser analizada.
+
 ![Alt text](./assets/image-3.png)
 
 A partir do momento que envia para o collector é possível mudar para onde ele vai enviar os dados analisados (uma ferramenta nova por exemplo).
@@ -57,5 +63,3 @@ K8S Operator
 Através de um manifesto ele monta um collector.
 
 [Código Github](https://github.com/ChristoPedro/demo-telemetry-tdc)
-
-Ele monitora as requisições de banco automáticamente.
